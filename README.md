@@ -85,7 +85,7 @@ npm run dev
 ### ⚙️ GitHub上でのワンタイム設定 (初回のみ)
 GitHub Actionsによる自動デプロイを有効にするために、以下の設定を行ってください。
 
-1. ご自身のGitHubリポジトリ（ `https://github.com/katzkawai/kklab-agy-examples` ）を開きます。
+1. ご自身のGitHubリポジトリ（ `https://github.com/katzkawai/kklab-agy-takoyaki` ）を開きます。
 2. 上部メニューの ⚙️ **Settings** (設定) をクリックします。
 3. 左サイドバーにある **Pages** をクリックします。
 4. **Build and deployment** エリアにある **Source** のプルダウンメニューを開き、デフォルトの「Deploy from a branch」から **「GitHub Actions」** に変更します。
