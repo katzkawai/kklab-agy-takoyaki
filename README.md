@@ -56,6 +56,41 @@ npm run dev
 
 ---
 
+## 🌐 GitHub Pages への公開方法 (デプロイ)
+
+本プロジェクトは **GitHub Actions** を利用して、GitHub Pages 上に自動的に公開（デプロイ）されるように構成されています。初心者の方でも以下の流れで簡単に管理できます。
+
+### 📁 公開に必要な設定ファイル（準備済み）
+以下の2つのファイルが自動デプロイの役割を担っています。
+1. **[vite.config.js](file:///home/katzkawai/kklab-agy-examples/vite.config.js)**
+   - GitHub PagesのURL（`https://<ユーザー名>.github.io/<リポジトリ名>/`）のサブディレクトリで、画像やスタイルが正しく読み込まれるようにベースパスを設定しています。
+2. **[.github/workflows/deploy.yml](file:///home/katzkawai/kklab-agy-examples/.github/workflows/deploy.yml)**
+   - コードをGitHubに送信（プッシュ）したときに、自動的にプログラムを組み立て（ビルド）、公開ページに反映させるための自動化設計図です。
+
+### ⚙️ GitHub上でのワンタイム設定 (初回のみ)
+GitHub Actionsによる自動デプロイを有効にするために、以下の設定を行ってください。
+
+1. ご自身のGitHubリポジトリ（ `https://github.com/katzkawai/kklab-agy-examples` ）を開きます。
+2. 上部メニューの ⚙️ **Settings** (設定) をクリックします。
+3. 左サイドバーにある **Pages** をクリックします。
+4. **Build and deployment** エリアにある **Source** のプルダウンメニューを開き、デフォルトの「Deploy from a branch」から **「GitHub Actions」** に変更します。
+
+これだけで設定は完了です！
+
+### 🔄 日々の更新方法
+今後、HTMLやCSS、JSなどのファイルを修正して公開したいときは、以下の手順のみで自動更新されます。
+
+1. ローカルでファイルを編集します。
+2. 変更をGitでコミットし、GitHubにプッシュします。
+   ```bash
+   git add .
+   git commit -m "修正内容のメッセージ"
+   git push origin main
+   ```
+3. プッシュすると、GitHub側で自動的にビルドと公開作業が始まります。進行状況はリポジトリの **Actions** タブから確認できます。
+
+---
+
 ## 📅 更新履歴
 
 ### [1.0.0] - 2026-06-18
@@ -68,3 +103,4 @@ npm run dev
 * Viteによるローカルプレビュー環境の構築。
 * ローカルGitリポジトリの初期化とファーストコミット。
 * 不要ファイル除外用の `.gitignore` を追加。
+* GitHub Pagesへの自動デプロイ設定（Viteベース設定、GitHub Actionsワークフロー）の追加と、初心者向けの公開ガイドの追加。
