@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>極上たこ焼き 蛸ノ灯 (Takonohi) - 秘伝の出汁と職人技</title>
+  <meta name="description" content="外はカリッ、中はトロッ。極上の真蛸と秘伝の出汁生地、そして熟練の職人技が織りなす究極のたこ焼き。夜の屋台をイメージした洗練された空間「蛸ノ灯」公式サイト。">
+  <!-- Google Fonts: Sawarabi Mincho & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Tailwind is avoided as per instructions. Custom CSS is used. -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="main-header">
+    <div class="logo">
+      <span class="lantern-icon"><i class="fa-solid fa-lightbulb"></i></span>
+      <span class="logo-text">蛸ノ灯</span>
+      <span class="logo-sub">たこのひ</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#hero" class="nav-link active">ホーム</a>
+      <a href="#concept" class="nav-link">こだわり</a>
+      <a href="#menu" class="nav-link">お品書き</a>
+      <a href="#simulator" class="nav-link">トッピング注文</a>
+      <a href="#access" class="nav-link">店舗情報</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-triggerBtn" id="cart-toggle">
+        <i class="fa-solid fa-shopping-basket"></i>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content">
+      <div class="lantern-container">
+        <div class="red-lantern hang-left">
+          <div class="lantern-text">蛸</div>
+        </div>
+        <div class="red-lantern hang-right">
+          <div class="lantern-text">灯</div>
+        </div>
+      </div>
+      <p class="hero-subheading">一玉に魂を込める、極上の職人たこ焼き</p>
+      <h1 class="hero-title">外はカリッ、<br><span class="highlight-neon">中はトロッ。</span></h1>
+      <p class="hero-description">
+        厳選された大粒の真蛸、数種類の削り節から引いた秘伝の出汁。合わさる瞬間の奇跡を、夜風に揺れる灯火の下でお楽しみください。
+      </p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary">お品書きを見る</a>
+        <a href="#simulator" class="btn btn-secondary">トッピングを試す</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-image-wrapper">
+        <img src="assets/images/hero_takoyaki.jpg" alt="極上たこ焼き 蛸ノ灯" id="hero-img">
+        <div class="steam-container" id="steam-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept Section -->
+  <section id="concept" class="concept-section">
+    <div class="container">
+      <h2 class="section-title text-center"><span class="title-jp">三大こだわり</span><span class="title-en">Our Craftsmanship</span></h2>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <div class="concept-icon-wrap">
+            <i class="fa-solid fa-water"></i>
+          </div>
+          <h3>一、極上の真蛸</h3>
+          <p>日本近海で獲れた身の引き締まった真蛸のみを厳選。噛むほどに広がる旨味と絶妙な歯ごたえが特徴です。</p>
+        </div>
+        <div class="concept-card">
+          <div class="concept-icon-wrap">
+            <i class="fa-solid fa-bowl-food"></i>
+          </div>
+          <h3>二、秘伝の出汁生地</h3>
+          <p>鰹節、昆布、煮干しから丁寧にひいた天然出汁をベースに、独自の配合で仕上げた極上生地。ソースなしでも美味しく召し上がれます。</p>
+        </div>
+        <div class="concept-card">
+          <div class="concept-icon-wrap">
+            <i class="fa-solid fa-fire-burner"></i>
+          </div>
+          <h3>三、極限の焼き加減</h3>
+          <p>特製の極厚特注鉄板を使用し、強火で一気に焼き上げます。外側の香ばしさと、中の極上のとろみは職人の勘だけが生み出せる技です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <h2 class="section-title text-center"><span class="title-jp">お品書き</span><span class="title-en">Menu</span></h2>
+      <div class="menu-grid">
+        <!-- Item 1 -->
+        <div class="menu-card" data-id="1" data-name="元祖 秘伝ソースたこ焼き" data-price="600">
+          <div class="menu-badge">一番人気</div>
+          <div class="menu-card-img">
+            <div class="takoyaki-sphere classic"></div>
+          </div>
+          <div class="menu-card-info">
+            <h3>元祖 秘伝ソースたこ焼き</h3>
+            <p class="menu-card-desc">特製フルーティーソースと自家製マヨネーズ。かつお節と青のりをたっぷりと。</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">¥600 <span class="tax-in">(税込)</span></span>
+              <button class="btn-order-direct select-item-btn" data-id="1">選択する</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="menu-card" data-id="2" data-name="たっぷり九条ねぎ塩マヨ" data-price="650">
+          <div class="menu-badge special">店主おすすめ</div>
+          <div class="menu-card-img">
+            <div class="takoyaki-sphere negishio"></div>
+          </div>
+          <div class="menu-card-info">
+            <h3>たっぷり九条ねぎ塩マヨ</h3>
+            <p class="menu-card-desc">京都府産九条ねぎを贅沢に乗せ、特製塩だれとマヨネーズでさっぱりと仕上げました。</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">¥650 <span class="tax-in">(税込)</span></span>
+              <button class="btn-order-direct select-item-btn" data-id="2">選択する</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="menu-card" data-id="3" data-name="博多明太あぶりチーズ" data-price="700">
+          <div class="menu-card-img">
+            <div class="takoyaki-sphere mentai"></div>
+          </div>
+          <div class="menu-card-info">
+            <h3>博多明太あぶりチーズ</h3>
+            <p class="menu-card-desc">濃厚明太子ソースに炙ったチーズがとろける、女性に絶大な人気を誇る一品。</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">¥700 <span class="tax-in">(税込)</span></span>
+              <button class="btn-order-direct select-item-btn" data-id="3">選択する</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="menu-card" data-id="4" data-name="醤油極み素焼き" data-price="580">
+          <div class="menu-card-img">
+            <div class="takoyaki-sphere suyaki"></div>
+          </div>
+          <div class="menu-card-info">
+            <h3>醤油極み素焼き</h3>
+            <p class="menu-card-desc">出汁の旨味をダイレクトに感じる一品。少量の特製ハケ醤油で生地を引き立てます。</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">¥580 <span class="tax-in">(税込)</span></span>
+              <button class="btn-order-direct select-item-btn" data-id="4">選択する</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive topping simulator Section -->
+  <section id="simulator" class="simulator-section">
+    <div class="container">
+      <h2 class="section-title text-center"><span class="title-jp">トッピング注文シミュレーター</span><span class="title-en">My Takoyaki Craft</span></h2>
+      <p class="section-subtitle text-center">お好みのたこ焼きとトッピングを選んで、あなただけの極上の一皿を作りましょう！</p>
+      
+      <div class="simulator-grid">
+        <!-- Visual display column -->
+        <div class="sim-visual-column">
+          <div class="sim-plate-wrapper">
+            <div class="sim-plate">
+              <!-- Animated steam effect -->
+              <div class="steam-overlay" id="sim-steam"></div>
+              
+              <!-- 6 Takoyaki Balls -->
+              <div class="takoyaki-plate-grid">
+                <div class="takoyaki-ball" id="ball-1">
+                  <div class="ball-body"></div>
+                  <div class="topping-sauce"></div>
+                  <div class="topping-mayo"></div>
+                  <div class="topping-aonori"></div>
+                  <div class="topping-katsuobushi"></div>
+                  <div class="topping-cheese"></div>
+                  <div class="topping-negi"></div>
+                  <div class="topping-mentai"></div>
+                </div>
+                <div class="takoyaki-ball" id="ball-2">
+                  <div class="ball-body"></div>
+                  <div class="topping-sauce"></div>
+                  <div class="topping-mayo"></div>
+                  <div class="topping-aonori"></div>
+                  <div class="topping-katsuobushi"></div>
+                  <div class="topping-cheese"></div>
+                  <div class="topping-negi"></div>
+                  <div class="topping-mentai"></div>
+                </div>
+                <div class="takoyaki-ball" id="ball-3">
+                  <div class="ball-body"></div>
+                  <div class="topping-sauce"></div>
+                  <div class="topping-mayo"></div>
+                  <div class="topping-aonori"></div>
+                  <div class="topping-katsuobushi"></div>
+                  <div class="topping-cheese"></div>
+                  <div class="topping-negi"></div>
+                  <div class="topping-mentai"></div>
+                </div>
+                <div class="takoyaki-ball" id="ball-4">
+                  <div class="ball-body"></div>
+                  <div class="topping-sauce"></div>
+                  <div class="topping-mayo"></div>
+                  <div class="topping-aonori"></div>
+                  <div class="topping-katsuobushi"></div>
+                  <div class="topping-cheese"></div>
+                  <div class="topping-negi"></div>
+                  <div class="topping-mentai"></div>
+                </div>
+                <div class="takoyaki-ball" id="ball-5">
+                  <div class="ball-body"></div>
+                  <div class="topping-sauce"></div>
+                  <div class="topping-mayo"></div>
+                  <div class="topping-aonori"></div>
+                  <div class="topping-katsuobushi"></div>
+                  <div class="topping-cheese"></div>
+                  <div class="topping-negi"></div>
+                  <div class="topping-mentai"></div>
+                </div>
+                <div class="takoyaki-ball" id="ball-6">
+                  <div class="ball-body"></div>
+                  <div class="topping-sauce"></div>
+                  <div class="topping-mayo"></div>
+                  <div class="topping-aonori"></div>
+                  <div class="topping-katsuobushi"></div>
+                  <div class="topping-cheese"></div>
+                  <div class="topping-negi"></div>
+                  <div class="topping-mentai"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sim-visual-status text-center">
+            <p id="sim-status-text">たこ焼きのベースを選択してください</p>
+          </div>
+        </div>
+
+        <!-- Controls column -->
+        <div class="sim-control-column">
+          <div class="sim-control-card">
+            <h3 class="control-header">1. ベースを選択</h3>
+            <div class="base-selection">
+              <label class="base-option">
+                <input type="radio" name="takoyaki-base" value="1" checked>
+                <span class="base-box">
+                  <span class="base-title">元祖 秘伝ソース</span>
+                  <span class="base-price">¥600</span>
+                </span>
+              </label>
+              <label class="base-option">
+                <input type="radio" name="takoyaki-base" value="2">
+                <span class="base-box">
+                  <span class="base-title">たっぷり九条ねぎ塩</span>
+                  <span class="base-price">¥650</span>
+                </span>
+              </label>
+              <label class="base-option">
+                <input type="radio" name="takoyaki-base" value="3">
+                <span class="base-box">
+                  <span class="base-title">博多明太あぶり</span>
+                  <span class="base-price">¥700</span>
+                </span>
+              </label>
+              <label class="base-option">
+                <input type="radio" name="takoyaki-base" value="4">
+                <span class="base-box">
+                  <span class="base-title">醤油極み素焼き</span>
+                  <span class="base-price">¥580</span>
+                </span>
+              </label>
+            </div>
+
+            <h3 class="control-header">2. トッピングを追加</h3>
+            <div class="topping-selection">
+              <label class="topping-checkbox">
+                <input type="checkbox" id="top-sauce" checked>
+                <span class="top-box">
+                  <span class="top-title">特製ソース</span>
+                  <span class="top-price">+¥0</span>
+                </span>
+              </label>
+              <label class="topping-checkbox">
+                <input type="checkbox" id="top-mayo" checked>
+                <span class="top-box">
+                  <span class="top-title">自家製マヨネーズ</span>
+                  <span class="top-price">+¥0</span>
+                </span>
+              </label>
+              <label class="topping-checkbox">
+                <input type="checkbox" id="top-aonori" checked>
+                <span class="top-box">
+                  <span class="top-title">青のり</span>
+                  <span class="top-price">+¥0</span>
+                </span>
+              </label>
+              <label class="topping-checkbox">
+                <input type="checkbox" id="top-katsuobushi" checked>
+                <span class="top-box">
+                  <span class="top-title">削りかつお節</span>
+                  <span class="top-price">+¥0</span>
+                </span>
+              </label>
+              <label class="topping-checkbox">
+                <input type="checkbox" id="top-negi">
+                <span class="top-box">
+                  <span class="top-title">九条ねぎ大盛り</span>
+                  <span class="top-price">+¥100</span>
+                </span>
+              </label>
+              <label class="topping-checkbox">
+                <input type="checkbox" id="top-cheese">
+                <span class="top-box">
+                  <span class="top-title">炙りチーズ</span>
+                  <span class="top-price">+¥120</span>
+                </span>
+              </label>
+              <label class="topping-checkbox">
+                <input type="checkbox" id="top-mentai">
+                <span class="top-box">
+                  <span class="top-title">明太子ソース</span>
+                  <span class="top-price">+¥100</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="sim-summary">
+              <div class="summary-row">
+                <span>ベース価格</span>
+                <span id="summary-base-price">¥600</span>
+              </div>
+              <div class="summary-row">
+                <span>トッピング追加</span>
+                <span id="summary-topping-price">¥0</span>
+              </div>
+              <hr class="summary-divider">
+              <div class="summary-row total-row">
+                <span>合計金額</span>
+                <span id="summary-total-price" class="neon-text-gold">¥600</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-block" id="add-to-cart-btn">このトッピングで注文カートに入れる</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Info / Access Section -->
+  <section id="access" class="access-section">
+    <div class="container">
+      <h2 class="section-title text-center"><span class="title-jp">店舗情報・アクセス</span><span class="title-en">Information</span></h2>
+      <div class="access-grid">
+        <div class="access-info">
+          <h3>蛸ノ灯 (たこのひ) 本店</h3>
+          <p class="access-text"><i class="fa-solid fa-map-pin"></i> 〒104-0061 東京都中央区銀座 5丁目 8-1 蛸ノ灯ビル1F</p>
+          <p class="access-text"><i class="fa-solid fa-phone"></i> 03-1234-5678</p>
+          <p class="access-text"><i class="fa-solid fa-clock"></i> 営業時間: 17:00 〜 24:00 (L.O. 23:30)</p>
+          <p class="access-text"><i class="fa-solid fa-calendar-xmark"></i> 定休日: 毎週水曜日、第二火曜日</p>
+          
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="access-map">
+          <!-- Stylized Mock Map -->
+          <div class="mock-map">
+            <div class="map-overlay">
+              <i class="fa-solid fa-map-location-dot map-icon"></i>
+              <h4>店舗の場所</h4>
+              <p>銀座駅 A3出口 徒歩3分 / 東銀座駅 A1出口 徒歩2分</p>
+              <button class="btn btn-secondary btn-sm" onclick="window.open('https://maps.google.com')"><i class="fa-solid fa-arrow-up-right-from-square"></i> Googleマップで見る</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Sidebar (Hidden by default) -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar-header">
+      <h3>ご注文カート</h3>
+      <button class="cart-close" id="cart-close-btn">&times;</button>
+    </div>
+    <div class="cart-items-wrapper" id="cart-items-list">
+      <!-- Empty state -->
+      <div class="cart-empty-state">
+        <i class="fa-solid fa-shopping-basket"></i>
+        <p>カートは空です。<br>お好みのたこ焼きを追加してください。</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-display">
+        <span>合計金額:</span>
+        <span class="cart-total-value" id="cart-total-value">¥0</span>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkout-btn" disabled>模擬注文を確定する</button>
+    </div>
+  </div>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- Custom Alert/Modal for Checkout Confirmation -->
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="modal-content">
+      <div class="modal-icon-wrap">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h2>ご注文ありがとうございました！</h2>
+      <p class="modal-sub">（※これはシミュレーターによる模擬注文です）</p>
+      <div class="order-summary-box" id="modal-order-summary"></div>
+      <p class="modal-note">秘伝の極上たこ焼きを焼き上げてお待ちしております！</p>
+      <button class="btn btn-primary" id="modal-close-btn">閉じる</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2026 極上たこ焼き 蛸ノ灯 (Takonohi). All Rights Reserved.</p>
+  </footer>
+
+  <!-- Confetti Canvas (For checkout celebration) -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="index.js"></script>
+</body>
+</html>
